@@ -1,0 +1,47 @@
+.TH man 1 "15 Mar 2020" "1.0" "piDay man page"
+.SH name
+piDay \- a simple utility I wrote in C++ for Pi Day
+
+.SH SYNOPSIS
+.B piDay
+[\fB\-n\fR]
+symbol
+[\fISOURCE\-STRING\fR]
+
+.B piDay
+[\fB\-n\fR]
+pi
+[\fB\-f\fR]
+[\fB\-b\fR\fIINT:radix\fR]
+[\fB\-b\fR \fISTRING:digits\fR]
+[\fB\-p\fR \fISTRING:symbol\fR]
+[[\fIINT:start\fR] \fIINT:end\fR]
+
+.B piDay
+dump
+[[\fIINT:start\fR] \fIINT:end\fR]
+
+.SH DESCRIPTION
+.B piDay
+is a simple command-line utility I wrote in C++ on my Raspberry Pi 3 Model B for Pi Day. It knows 32768 fractional bits of Pi and can output any range of those digits in any base you desire.
+
+.SH OPTIONS
+.TP
+.BR \-n
+Suppress any trailing line break in the output.
+
+.TP
+.BR \-f
+Exclude the "3." and instead only print the internally stored fractional digits of Pi.
+
+.TP
+.BR \-b\fIINT:radix\fR
+Use a custom radix ranging from 2 to 64. Default is 10.
+
+.TP
+.BR \-b " " \fISTRING:digits\fR
+Use a custom base digit set ranging from 2 to 64 characters in length. Default is "0123456789".
+
+.TP
+.BR \-p " " \fISTRING:symbol\fR
+Use a custom decimal point. Default is ".".
